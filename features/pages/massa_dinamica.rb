@@ -2,14 +2,10 @@ class MassaDinamica < SitePrism::Page
   
   set_url "http://google.com.br"
 
-  element :input_cpf, "input[name='q']"
+  element :input_dados, "input[name='q']"
 
-  def deletar_linha_csv
-    binding.pry
-    CSV.foreach("./features/support/massa/cpfs.csv") do |linha|
-      previous = linha[0]
-      linha.delete previous
-      puts linha
-    end
+  def usar_massa(cpf, id)
+    input_dados.set("O cpf é #{cpf}, e o sticker #{id} ")
+    puts ("#{cpf} / #{id}")
   end
 end

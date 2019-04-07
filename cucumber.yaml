@@ -1,4 +1,4 @@
 <% require "csv" %>
-<% $CSV = CSV.read("./features/support/massa/cpfs.csv", :headers => true) %>
+<% $CSV = CSV.read("./features/support/dataset/cpfs.csv") %>
 
 default: features -t @massa

@@ -10,5 +10,6 @@ Quando utilizar a massa do csv no search
   | id  | <id>  |
 
   Exemplos:
-    | cpf            | id            |
-    | $CSV[0]['cpf'] | $CSV[1]['id'] |
+    | cpf        | id         |
+    | $CSV[0][0] | $CSV[0][1] |
+    | $CSV[1][0] | $CSV[1][1] |
